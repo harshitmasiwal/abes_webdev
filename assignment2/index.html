@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bus Booking System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    /* Navbar */
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: #0b5ed7; color: #fff; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: .5px; }
+    .logo img { width: 32px; height: 32px; }
+    /* Layout */
+    .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; padding: 28px 20px; max-width: 1080px; margin: 0 auto; }
+    @media (max-width: 820px){ .wrap{ grid-template-columns: 1fr; } }
+    .heading { padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px; }
+    .heading h1 { margin: 0 0 10px; font-size: 28px; }
+    .muted { color: #4b5563; line-height: 1.5; }
+    /* Form */
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 520px){ .row{ grid-template-columns: 1fr; } }
+    label { font-size: 14px; color: #374151; display: block; margin-bottom: 6px; }
+    input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; }
+    .radios { display: flex; gap: 16px; align-items: center; }
+    .actions { margin-top: 16px; }
+    .btn { background: #0b5ed7; color: #fff; border: none; padding: 12px 16px; border-radius: 10px; cursor: pointer; }
+    .btn:hover { opacity: .95; }
+    .note { font-size: 12px; color: #6b7280; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="nav" aria-label="Main">
+    <div class="logo">
+      <!-- Replace the src with your own logo if you like -->
+      <img src="https://via.placeholder.com/64x64.png?text=🚌" alt="Company logo" />
+      <span>SwiftRide</span>
+    </div>
+    <div>Contact: support@swiftride.example</div>
+  </nav>
+
+  <!-- Content -->
+  <main class="wrap">
+    <!-- Left: Heading / Info -->
+    <section class="heading">
+      <h1>Bus Booking System</h1>
+      <p class="muted">
+        Welcome! Fill your details to book your seat quickly. Choose your city and preferred coach type (AC / Non-AC),
+        then proceed to payment. Safe journeys start here. 🚌✨
+      </p>
+       <img height="300px" width="600px" src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop" alt="Luxury coach bus" />
+    </section>
+
+    <!-- Right: Booking Form -->
+    <section class="card" aria-labelledby="bookingFormTitle">
+      <h2 id="bookingFormTitle" style="margin-top:0;">Passenger Details</h2>
+      <form action="payment.html" method="get">
+        <div class="row">
+          <div>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g., Harshit Masiwal" required />
+          </div>
+
+          <div>
+            <label>Gender</label>
+            <div class="radios" role="radiogroup" aria-label="Gender">
+              <label><input type="radio" name="gender" value="Male" required /> Male</label>
+              <label><input type="radio" name="gender" value="Female" /> Female</label>
+              <label><input type="radio" name="gender" value="Other" /> Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 12px;">
+          <div>
+            <label for="city">Select City</label>
+            <select id="city" name="city" required>
+              <option value="" selected disabled>Choose a city</option>
+              <option>Delhi</option>
+              <option>Mumbai</option>
+              <option>Bengaluru</option>
+              <option>Hyderabad</option>
+              <option>Jaipur</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="coach">Coach Type</label>
+            <select id="coach" name="coach" required>
+              <option value="" selected disabled>Select coach</option>
+              <option>AC</option>
+              <option>Non-AC</option>
+            </select>
+            <div class="note">* AC generally includes recliner seats &amp; bottle water.</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn">Book Now</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

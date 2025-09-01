@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment • Bus Booking System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; background: #0b5ed7; color: #fff; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .logo img { width: 32px; height: 32px; }
+
+    .wrap { max-width: 960px; margin: 0 auto; padding: 24px 20px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px; }
+    .flex { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 820px){ .flex{ grid-template-columns: 1fr; } }
+    .bus { display: flex; align-items: center; justify-content: center; background: #f8fafc; border: 1px solid #eef2f7; border-radius: 12px; padding: 12px; }
+    .bus img { max-width: 100%; height: auto; border-radius: 8px; }
+    .pay h2 { margin-top: 0; }
+    .radios { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+    .btn { background: #16a34a; color: #fff; border: none; padding: 12px 16px; border-radius: 10px; cursor: pointer; }
+    .btn:hover { opacity: .95; }
+    .thanks { margin-top: 18px; padding: 14px; background: #ecfdf5; border: 1px solid #bbf7d0; color: #065f46; border-radius: 10px; }
+    .muted { color: #4b5563; font-size: 14px; }
+    .back { margin-top: 12px; display: inline-block; font-size: 14px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo">
+      <img src="https://via.placeholder.com/64x64.png?text=🚌" alt="Company logo" />
+      <span>SwiftRide</span>
+    </div>
+    <div>Secure Payment</div>
+  </nav>
+
+  <main class="wrap">
+    <div class="flex">
+      <!-- Bus image -->
+      <section class="bus" aria-label="Selected Bus">
+        <!-- Replace the image src with your own bus photo if desired -->
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop" alt="Luxury coach bus" />
+      </section>
+
+      <!-- Payment options -->
+      <section class="card pay" aria-labelledby="paymentOptionsTitle">
+        <h2 id="paymentOptionsTitle">Select Your Payment Method</h2>
+        <p class="muted">Please choose one of the bill pay options below:</p>
+
+        <form>
+          <div class="radios" role="radiogroup" aria-label="Payment Method">
+            <label><input type="radio" name="pay" value="UPI" required /> UPI</label>
+            <label><input type="radio" name="pay" value="ATM" /> ATM / Debit Card</label>
+            <label><input type="radio" name="pay" value="CreditCard" /> Credit Card</label>
+          </div>
+
+          <button type="submit" class="btn">Pay Now</button>
+
+          <!-- Static thank-you note as requested -->
+          <div class="thanks" role="status" aria-live="polite">
+            <strong>Thanks for using our services!</strong><br />
+            Your booking details will be shared to your registered contact shortly.
+          </div>
+        </form>
+
+        <a class="back" href="index.html">← Go back to booking</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
