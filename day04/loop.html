@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="evens"></h1>
+    <h1 id="odds"></h1>
+    
+<script>
+   document.write("Table of 7<br>");
+        for(let i=1; i<=10; i++) {
+            let num7 = 7 * i;
+            document.write(`7 x ${i} = ${num7} <br>`);
+        }
+
+        document.write("<br>Table of 3:<br>");
+        for(let i=1; i<=10; i++) {
+            let num3 = 3 * i;
+            document.write(`3 x ${i} = ${num3} <br>`);
+        }
+        document.write("<br>even numbers:");
+        for(let i=1; i<=10; i++) {
+            let num7 = 7 * i;
+            if(num7 % 2 === 0) document.write(num7 + ",");
+            let num3 = 3 * i;
+            if(num3 % 2 === 0) document.write(num3 + ",");
+    }
+
+        document.write("<br>odd numbers:");
+        for(let i=1; i<=10; i++) {
+            let num7 = 7 * i;
+            if(num7 % 2 !== 0) document.write(num7 + ",");
+            let num3 = 3 * i;
+            if(num3 % 2 !== 0) document.write(num3 + ",");
+        }
+</script>
+</body>
+</html>
