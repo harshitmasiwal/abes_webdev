@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        .outer{
+            display: flex;
+            justify-content: space-around;
+        }
+        .main{
+            background-color: blanchedalmond;
+            padding: 20px;
+            border:  10px solid blanchedalmond ;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="one">
+    </p>
+    <div class="outer">
+        <div class="main">
+            <div class="inside" id="s1">
+            </div>
+        </div>
+        <div class="main">
+            <div class="inside" id="s2">
+                >
+            </div>
+        </div>
+        <div class="main">
+            <div class="inside" id="s3">
+            </div>
+        </div>
+        <div class="main">
+            <div class="inside" id="s4">
+            </div>
+        </div>
+        <div class="main">
+            <div class="inside" id="s5">
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        // var arr = ["car","Bike","Cycle"]
+        // document.getElementById("one").innerHTML = arr
+        // const car = new Array("Car1","Car2","Car3");
+        // document.getElementById("one").innerHTML = car
+        // car[2] = "bike"
+        // document.getElementById("one").innerHTML = car[2]
+        // const person = {
+        //     firstname : "mohan",
+        //     lastname : "Ji",
+        //     age : 21,
+        // }
+        const student1 = {
+            name: "one",
+            rollno: "1",
+            class: "12"
+        }
+        const student2 = {
+            name: "two",
+            rollno: "2",
+            class: "11"
+        }
+        const student3 = {
+            name: "three",
+            rollno: "3",
+            class: "10"
+        }
+        const student4 = {
+            name: "four",
+            rollno: "4",
+            class: "9"
+        }
+        const student5 = {
+            name: "five",
+            rollno: "5",
+            class: "8"
+        }
+        // document.getElementById("one").innerHTML = person.firstname
+        document.getElementById("s2").innerHTML =
+         `<h1>${student2.name}<h1>
+            <br>
+            <h3>Roll No. ${student2.rollno}</h3>
+            <br>
+            <h3>Class ${student2.class}</h3>`
+            document.getElementById("s1").innerHTML =
+         `<h1>${student1.name}<h1>
+            <br>
+            <h3>Roll No. ${student1.rollno}</h3>
+            <br>
+            <h3>Class ${student1.class}</h3>`
+    </script>
+</body>
+
+</html>

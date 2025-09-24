@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="ABES" id="one" value="">
+    </div>
+    <button type="submit" onclick="display()">Submit</button>
+    <p id="two"></p>
+    <script>
+        function display(){
+            let x = document.getElementById('one').value
+            document.getElementById('two').innerHTML = `Welcome to ${x}`
+        }
+    </script>
+</body>
+</html>

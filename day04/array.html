@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Display</title>
+</head>
+<body>
+    <h2>Simple Array Display</h2>
+    <div id="arrayDisplay"></div>
+
+    <script>
+        // Create a simple array
+        let fruits = ["Apple", "Banana", "Orange", "Mango", "Grapes"];
+
+        // Get the display element
+        let displayDiv = document.getElementById("arrayDisplay");
+
+        // Display the array
+        displayDiv.innerHTML = "<h3>Fruits Array:</h3>";
+        displayDiv.innerHTML += "<ul>";
+        
+        for(let i = 0; i < fruits.length; i++) {
+            displayDiv.innerHTML += "<li>" + fruits[i] + "</li>";
+        }
+        
+        displayDiv.innerHTML += "</ul>";
+    </script>
+</body>
+</html>

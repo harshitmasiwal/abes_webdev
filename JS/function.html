@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<style>
+    /* #one{
+        border: 2px solid red;
+        height: 200px;
+        width: 200px;
+        background-color: brown;
+    } */
+    .b {
+        background-color: green;
+        margin: 10px;
+        padding: 5px;
+        border: 2px black solid;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="one">
+        <!-- <button onclick="abes()">click Here</button> -->
+    </div>
+    <button class="b" onclick="blue()">Blue</button>
+    <button class="b" onclick="red()">Red</button>
+    <button class="b" onclick="green()">Green</button>
+    <script>
+        // function abes()
+        // {
+        //     document.write("Hello")
+        // }
+        // function abes(){
+        //     document.getElementById('one').innerHTML="<h1>Hello</h1>"
+        // }
+        function blue() {
+            // document.getElementById('one').style.backgroundColor = "blue"
+            document.getElementsByTagName('body')[0].style.backgroundColor = "blue"
+        }
+        function red() {
+            document.getElementById('one').style.backgroundColor = "red"
+            document.getElementsByTagName('body')[0].style.backgroundColor = "red"
+        }
+        function green() {
+            document.getElementById('one').style.backgroundColor = "green"
+            document.getElementsByTagName('body')[0].style.backgroundColor = "green"
+        }
+    </script>
+</body>
+
+</html>

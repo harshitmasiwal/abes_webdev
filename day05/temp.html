@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Harshit Masiwal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Arial", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    .resume {
+      display: flex;
+      width: 850px;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    /* Left side */
+    .left {
+      background: #1a2c44;
+      color: #fff;
+      width: 30%;
+      padding: 30px 20px;
+    }
+    .profile-pic {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .profile-pic img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    }
+    .section-title {
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin: 25px 0 10px;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 5px;
+    }
+    .left p, .left li {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .left ul {
+      list-style: none;
+    }
+
+    /* Right side */
+    .right {
+      width: 70%;
+      padding: 30px;
+    }
+    .name {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .title {
+      font-size: 16px;
+      color: #1a2c44;
+      margin-bottom: 20px;
+    }
+    .profile, .work, .reference {
+      margin-bottom: 30px;
+    }
+    .heading {
+      font-size: 15px;
+      font-weight: bold;
+      color: #1a2c44;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .work-item {
+      margin-bottom: 15px;
+    }
+    .work-item h4 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+    .work-item span {
+      font-size: 12px;
+      color: #666;
+    }
+    .work-item ul {
+      margin-top: 5px;
+      margin-left: 15px;
+    }
+    .work-item ul li {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+    .reference-item {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <!-- LEFT -->
+    <div class="left">
+      <div class="profile-pic">
+        <img src="your-photo.jpg" alt="Harshit Masiwal">
+      </div>
+
+      <div class="section-title">CONTACT</div>
+      <p>📞 +91-XXXXXXXXXX</p>
+      <p>📧 harshitmasiwal@gmail.com</p>
+      <p>📍 Ghaziabad, India</p>
+      <p>🌐 github.com/HarshitMasiwal</p>
+
+      <div class="section-title">EDUCATION</div>
+      <p>2022 - 2026<br>ABES Engineering College<br>B.Tech IT<br>CGPA: 8.2/10</p>
+
+      <div class="section-title">SKILLS</div>
+      <ul>
+        <li>Full Stack Development</li>
+        <li>React, Node.js, MongoDB</li>
+        <li>DSA & Problem Solving</li>
+        <li>Project Management</li>
+        <li>UI/UX Design (Figma)</li>
+      </ul>
+
+      <div class="section-title">LANGUAGES</div>
+      <ul>
+        <li>English (Fluent)</li>
+        <li>Hindi (Native)</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+      <div class="header">
+        <div class="name">HARSHIT MASIWAL</div>
+        <div class="title">Full Stack Developer</div>
+      </div>
+
+      <div class="profile">
+        <div class="heading">PROFILE</div>
+        <p>Engineering student passionate about building scalable web applications and AI-powered systems. Strong background in React, Node.js, MongoDB, and UI/UX design. Experienced in hackathons and collaborative projects, with proven leadership and problem-solving skills.</p>
+      </div>
+
+      <div class="work">
+        <div class="heading">WORK EXPERIENCE / PROJECTS</div>
+
+        <div class="work-item">
+          <h4>AI-Powered Event Planner App <span>2025</span></h4>
+          <ul>
+            <li>Built full-stack web & mobile app with React, Node.js, MongoDB.</li>
+            <li>Integrated AI-based vendor recommendations and booking management.</li>
+            <li>Implemented JWT authentication and payment gateway (Stripe/Paytm).</li>
+          </ul>
+        </div>
+
+        <div class="work-item">
+          <h4>Telegram AI Bot with MongoDB <span>2025</span></h4>
+          <ul>
+            <li>Developed AI-powered Telegram bot for chat, file analysis, and web search.</li>
+            <li>Integrated Gemini API with MongoDB for storing user conversations.</li>
+          </ul>
+        </div>
+
+        <div class="work-item">
+          <h4>Predictive Supply Chain System (PepsiCo Simulation) <span>2025</span></h4>
+          <ul>
+            <li>Designed a high-level system for predictive shipping and distributor metrics.</li>
+            <li>Ensured supply chain visibility, sanity checks, and health monitoring.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reference">
+        <div class="heading">REFERENCE</div>
+        <div class="reference-item">
+          <strong>Available on request</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

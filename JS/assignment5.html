@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <style>
+        button{
+            margin: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 30px;
+        }
+        .card{
+            text-align: center;
+            margin-top: 100px;
+            background-color: burlywood;
+        }
+        #count{
+            background-color: yellow;
+            margin-left: 600px;
+            margin-right: 600px;
+            border: 2px solid black;
+            border-radius: 45%;
+        }
+        .card1{
+            margin: auto;
+        }
+        .keyboard{
+            display: flex;
+        }
+        .black{
+            background-color: black;
+            height: 60px;
+            width: 20px;
+            border: 2px solid black;
+        }
+        .white{
+            background-color: aliceblue;
+            height: 60px;
+            width: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <div style="text-align: center;">
+        <h1 style="margin: auto; background-color: black; color: white;">Counter App</h1>
+    </div>
+</nav>
+<main>
+    <div class="card">
+        <h2>Counter</h2>
+        <h3 id="count"></h3>
+        <button onclick="inc()">+</button>
+        <button onclick="dec()">-</button>
+    </div>
+</main>
+
+<div style="display: flex;justify-content: space-evenly; margin-top: 20px;">
+    <div class="card1">
+    <div class="img1">
+        <img src="..\HTML\istockphoto-2229194264-612x612.webp" alt="Image 1" srcset="" id="none">
+    </div>
+    <div>
+        <button onclick="hide()">Hide</button>
+    </div>
+</div>
+<br>
+<div class="card1">
+    <div class="img1">
+        <img src="..\HTML\Screenshot 2025-02-02 122649.png" alt="Image 2" srcset="" id="change">
+    </div>
+    <div>
+        <button onclick="change()">Change</button>
+    </div>
+</div>
+</div>
+<br>
+<div class="keyboard">
+   <button class="black"></button>
+   <button class="white"></button>
+   <button class="black"></button>
+</div>
+    <script>
+        var count = 0;
+        document.getElementById('count').innerHTML = count;
+        function inc() {
+            if (count == 10) {
+                alert("Max limit Reached")
+            } else {
+                count += 1;
+                document.getElementById('count').innerHTML = count;
+            }
+        }
+        function dec(){
+            if (count == 0) {
+                alert("Min limit Reached")
+            } else {
+                count -= 1;
+                document.getElementById('count').innerHTML = count;
+            }
+        }
+        function hide(){
+            document.getElementById('none').style.display="none";
+        }
+        function change(){
+            document.getElementById('change').src="..\HTML\istockphoto-2229194264-612x612.webp";
+        }
+    </script>
+</body>
+
+</html>

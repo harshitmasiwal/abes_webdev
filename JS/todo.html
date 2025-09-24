@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #9b2dba;
+            background: linear-gradient(90deg, rgba(155, 45, 186, 1) 0%, rgba(199, 87, 184, 1) 17%, rgba(237, 221, 83, 1) 100%);
+        }
+
+        nav h1 {
+            text-align: center;
+            color: blueviolet;
+        }
+
+        .input div {
+            margin: 0 auto;
+            text-align: center;
+            width: 80vw;
+        }
+        input{
+            width: 60vw;
+            height: 5vh;
+            border: solid black 2px;
+            border-radius: 10px;
+            padding: 5px;
+            margin-right: 0;
+        }
+       #list {
+            margin: 20px auto;
+            text-align: center;
+            width: 80vw;
+        }
+
+        #add {
+            background-color: lightgreen;
+            height: 7vh;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-left: 0;
+            cursor: pointer;
+            padding: 0 15px;
+            font-size: 16px;
+        }
+
+        .task {
+            background: white;
+            margin: 10px auto;
+            padding: 10px;
+            width: 60vw;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            font-size: 18px;
+        }
+
+        .deleteBtn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .deleteBtn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h1>Todo List</h1>
+    </nav>
+    <main>
+        <div class="input">
+            <div>
+                <input type="text" placeholder="Enter your task" id="task">
+                <button id="add" onclick="addTask()">ADD</button>
+            </div>
+        </div>
+        <div id="list">
+
+        </div>
+    </main>
+     <script>
+        function addTask() {
+            let value = document.getElementById('task').value.trim();
+            if (value === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            let list = document.getElementById('list');
+
+            let taskDiv = document.createElement('div');
+            taskDiv.className = 'task';
+
+            let taskText = document.createElement('span');
+            taskText.textContent = value;
+
+            let deleteBtn = document.createElement('button');
+            deleteBtn.textContent = "Delete";
+            deleteBtn.className = "deleteBtn";
+            deleteBtn.onclick = function () {
+                list.removeChild(taskDiv);
+            };
+
+            taskDiv.appendChild(taskText);
+            taskDiv.appendChild(deleteBtn);
+            list.appendChild(taskDiv);
+
+            document.getElementById('task').value = "";
+        }
+    </script>
+</body>
+
+</html>
