@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback Function Example</title>
+</head>
+<body>
+    <h2>Callback Function Demo</h2>
+    
+    <script>
+        // Example 1: Simple callback
+        function greet(name, callback) {
+            console.log('Hello ' + name);
+            callback();
+        }
+
+        function callbackFunction() {
+            console.log('This is callback function');
+        }
+
+        // Using the callback
+        greet('John', callbackFunction);
+
+        // Example 2: Callback with setTimeout
+        console.log('Starting...');
+        setTimeout(function() {
+            console.log('2 seconds have passed!');
+        }, 2000);
+        console.log('Finishing...');
+    </script>
+</body>
+</html>
